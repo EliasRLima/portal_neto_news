@@ -12,6 +12,8 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
+<?import org.kordamp.ikonli.javafx.FontIcon?>
+<?import com.jfoenix.controls.*?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
@@ -208,6 +210,18 @@
                                                       </JFXButton>
                                                    </children>
                                                 </JFXBadge>
+                                                <Label styleClass="title-label">Badge Icons</Label>
+        <HBox spacing="20" style="-fx-padding: 0 0 0 50;">
+            <children>
+                <JFXBadge fx:id="badge1" position="TOP_RIGHT" text="1"
+                          styleClass="icons-badge">
+                    <StackPane style="-fx-padding: 10;">
+                         <FontIcon iconLiteral="fas-star" iconSize="24"
+                                             styleClass="icon"/>
+                    </StackPane>
+                </JFXBadge>
+            </children>
+        </HBox>
                                                 <JFXButton maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" text="Reportar">
                                                    <graphic>
                                                       <FontAwesomeIcon fill="#ff9500" glyphName="WARNING" />

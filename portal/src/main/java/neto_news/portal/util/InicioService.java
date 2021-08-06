@@ -14,7 +14,6 @@ public final class InicioService {
 
   private InicioService(Stage janela) {
     this.janela = janela;
-    System.out.println("iniciado");
   }
 
   /**
