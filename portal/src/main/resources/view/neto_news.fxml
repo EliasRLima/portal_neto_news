@@ -1,0 +1,471 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXBadge?>
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXNodesList?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="neto_news.portal.controller.BaseController">
+   <children>
+      <BorderPane layoutX="312.0" layoutY="217.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <top>
+            <HBox prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: #0d0d0d;" BorderPane.alignment="CENTER">
+               <children>
+                  <Label contentDisplay="RIGHT" text="Neto New'S" textFill="#ff9933">
+                     <font>
+                        <Font name="Comic Sans MS" size="30.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="10.0" top="30.0" />
+                     </HBox.margin>
+                     <graphic>
+                        <FontAwesomeIcon glyphName="PENCIL" />
+                     </graphic>
+                  </Label>
+                  <HBox alignment="BOTTOM_LEFT" prefHeight="100.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <JFXButton fx:id="btn_mn_news" text="Novidades" textFill="#d0cdcd">
+                           <graphic>
+                              <FontAwesomeIcon fill="#ff9933" glyphName="CLOCK_ALT" />
+                           </graphic>
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton fx:id="btn_mn_liked" text="Populares" textFill="#d0cdcd">
+                           <graphic>
+                              <FontAwesomeIcon fill="#ff9933" glyphName="SORT_AMOUNT_DESC" />
+                           </graphic>
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton fx:id="btn_mn_esportes" text="Esportes" textFill="#d0cdcd">
+                           <graphic>
+                              <FontAwesomeIcon fill="#ff9933" glyphName="SOCCER_BALL_ALT" />
+                           </graphic>
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton fx:id="btn_mn_games" text="Games" textFill="#d0cdcd">
+                           <graphic>
+                              <FontAwesomeIcon fill="#ff9933" glyphName="GAMEPAD" />
+                           </graphic>
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton fx:id="btn_mn_politica" text="Politica" textFill="#d0cdcd">
+                           <graphic>
+                              <FontAwesomeIcon fill="#ff9933" glyphName="INSTITUTION" />
+                           </graphic>
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </JFXButton>
+                     </children>
+                     <padding>
+                        <Insets bottom="20.0" left="10.0" />
+                     </padding>
+                  </HBox>
+                  <HBox alignment="TOP_RIGHT" prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <JFXNodesList>
+                           <children>
+                              <JFXButton buttonType="RAISED" contentDisplay="CENTER" graphicTextGap="7.0" ripplerFill="WHITE" style="-fx-background-color: #ff9933; -fx-background-radius: 100;" text=" ">
+                                 <graphic>
+                                    <FontAwesomeIcon glyphName="USER" size="2em" />
+                                 </graphic>
+                              </JFXButton>
+                              <JFXButton fx:id="btn_login" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="60.0" style="-fx-background-color: #ff9933;" text="ACESSO" textFill="WHITE" />
+                              <JFXButton fx:id="btn_sair" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="60.0" style="-fx-background-color: #ff9933;" text="SAIR" textFill="WHITE" />
+                              <JFXButton fx:id="btn_sobre" buttonType="RAISED" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="60.0" style="-fx-background-color: white;" text="SOBRE" textFill="#ff9933" />
+                           </children>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <HBox.margin>
+                              <Insets right="15.0" />
+                           </HBox.margin>
+                        </JFXNodesList>
+                        <JFXButton fx:id="btn_minimizar" contentDisplay="CENTER" text=" ">
+                           <graphic>
+                              <FontAwesomeIcon fill="#fcfcfc" glyphName="MINUS" />
+                           </graphic>
+                        </JFXButton>
+                        <JFXButton fx:id="btn_close" contentDisplay="CENTER" text=" ">
+                           <graphic>
+                              <FontAwesomeIcon fill="#eb0000" glyphName="CLOSE" />
+                           </graphic>
+                        </JFXButton>
+                     </children>
+                  </HBox>
+               </children>
+            </HBox>
+         </top>
+         <center>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white;" BorderPane.alignment="CENTER">
+               <children>
+                  <AnchorPane prefHeight="450.0" prefWidth="700.0" style="-fx-background-color: #ff9933;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                                 <children>
+                                    <Label fx:id="lb_ntc_principal" text="Bem vindo ao NETO NEWS!">
+                                       <font>
+                                          <Font name="System Bold" size="25.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets top="50.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                    <ImageView fx:id="img_ntc_principal" fitHeight="350.0" fitWidth="500.0" pickOnBounds="true">
+                                       <image>
+                                          <Image url="images/neto_news.png" />
+                                       </image>
+                                       <VBox.margin>
+                                          <Insets top="10.0" />
+                                       </VBox.margin>
+                                    </ImageView>
+                                    <JFXTextArea fx:id="txt_ntc_principal" editable="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefColumnCount="20" prefWidth="550.0" style="-fx-border-color: transparent;" text="Nosso portal é atualizado a todo momento para deixa você por dentro da disciplina de LP3! &#10;&#10;Realize seu login ou cadastro para receber e avaliar as melhores noticias!">
+                                       <font>
+                                          <Font size="17.0" />
+                                       </font>
+                                    </JFXTextArea>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane prefHeight="668.0" prefWidth="324.0" style="-fx-background-color: white;" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <JFXButton fx:id="btn_ntc_refresh" text=" " AnchorPane.leftAnchor="40.0" AnchorPane.topAnchor="0.0">
+                           <graphic>
+                              <FontAwesomeIcon glyphName="REFRESH" size="2em" />
+                           </graphic>
+                        </JFXButton>
+                        <JFXButton fx:id="btn_ntc_next" alignment="CENTER" contentDisplay="CENTER" text=" " AnchorPane.leftAnchor="80.0" AnchorPane.topAnchor="0.0">
+                           <graphic>
+                              <FontAwesomeIcon glyphName="ARROW_RIGHT" size="2em" />
+                           </graphic>
+                        </JFXButton>
+                        <JFXButton fx:id="btn_ntc_back" contentDisplay="CENTER" text=" " AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <graphic>
+                              <FontAwesomeIcon glyphName="ARROW_LEFT" size="2em" />
+                           </graphic>
+                        </JFXButton>
+                        <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" style="-fx-spacing: 5;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="40.0">
+                           <children>
+                              <HBox fx:id="hb_ntc_1" alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                                 <children>
+                                    <ImageView fx:id="img_ntc_1" fitHeight="98.0" fitWidth="98.0" pickOnBounds="true">
+                                       <image>
+                                          <Image url="@../Pictures/noticia1.png" />
+                                       </image>
+                                    </ImageView>
+                                    <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                                       <children>
+                                          <HBox alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="200.0">
+                                             <children>
+                                                <Label fx:id="lb_tittle_ntc_1" text="Essa é a noticia 1!">
+                                                   <font>
+                                                      <Font name="System Bold" size="16.0" />
+                                                   </font>
+                                                   <HBox.margin>
+                                                      <Insets left="10.0" />
+                                                   </HBox.margin>
+                                                </Label>
+                                             </children>
+                                          </HBox>
+                                          <HBox prefHeight="50.0" prefWidth="200.0">
+                                             <children>
+                                                <JFXButton fx:id="btn_open_ntc_1" text="Abrir">
+                                                   <graphic>
+                                                      <FontAwesomeIcon fill="#25a117" glyphName="EXPAND" size="1.5em" />
+                                                   </graphic>
+                                                </JFXButton>
+                                                <JFXBadge fx:id="bdg_ntc_1" maxHeight="-Infinity" maxWidth="-Infinity" text="">
+                                                   <children>
+                                                      <JFXButton fx:id="btn_like_ntc_1" text="Like">
+                                                         <graphic>
+                                                            <FontAwesomeIcon fill="#ff0101" glyphName="HEART" size="1.5em" />
+                                                         </graphic>
+                                                      </JFXButton>
+                                                   </children>
+                                                </JFXBadge>
+                                                <JFXButton maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" text="Reportar">
+                                                   <graphic>
+                                                      <FontAwesomeIcon fill="#ff9500" glyphName="WARNING" />
+                                                   </graphic>
+                                                </JFXButton>
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </HBox>
+                              <HBox fx:id="hb_ntc_2" alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                                 <children>
+                                    <ImageView fx:id="img_ntc_2" fitHeight="98.0" fitWidth="98.0" pickOnBounds="true">
+                                       <image>
+                                          <Image url="@../Pictures/noticia1.png" />
+                                       </image>
+                                    </ImageView>
+                                    <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                                       <children>
+                                          <HBox alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="200.0">
+                                             <children>
+                                                <Label fx:id="lb_tittle_ntc_2" text="Essa é a noticia 2!">
+                                                   <font>
+                                                      <Font name="System Bold" size="16.0" />
+                                                   </font>
+                                                   <HBox.margin>
+                                                      <Insets left="10.0" />
+                                                   </HBox.margin>
+                                                </Label>
+                                             </children>
+                                          </HBox>
+                                          <HBox prefHeight="50.0" prefWidth="200.0">
+                                             <children>
+                                                <JFXButton fx:id="btn_open_ntc_2" text="Abrir">
+                                                   <graphic>
+                                                      <FontAwesomeIcon fill="#25a117" glyphName="EXPAND" size="1.5em" />
+                                                   </graphic>
+                                                </JFXButton>
+                                                <JFXBadge fx:id="bdg_ntc_2" maxHeight="-Infinity" maxWidth="-Infinity" text="">
+                                                   <children>
+                                                      <JFXButton fx:id="btn_like_ntc_2" text="Like">
+                                                         <graphic>
+                                                            <FontAwesomeIcon fill="#ff0101" glyphName="HEART" size="1.5em" />
+                                                         </graphic>
+                                                      </JFXButton>
+                                                   </children>
+                                                </JFXBadge>
+                                                <JFXButton maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" text="Reportar">
+                                                   <graphic>
+                                                      <FontAwesomeIcon fill="#ff9500" glyphName="WARNING" />
+                                                   </graphic>
+                                                </JFXButton>
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </HBox>
+                              <HBox fx:id="hb_ntc_3" alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                                 <children>
+                                    <ImageView fx:id="img_ntc_3" fitHeight="98.0" fitWidth="98.0" pickOnBounds="true">
+                                       <image>
+                                          <Image url="@../Pictures/noticia1.png" />
+                                       </image>
+                                    </ImageView>
+                                    <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                                       <children>
+                                          <HBox alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="200.0">
+                                             <children>
+                                                <Label fx:id="lb_tittle_ntc_3" text="Essa é a noticia 3!">
+                                                   <font>
+                                                      <Font name="System Bold" size="16.0" />
+                                                   </font>
+                                                   <HBox.margin>
+                                                      <Insets left="10.0" />
+                                                   </HBox.margin>
+                                                </Label>
+                                             </children>
+                                          </HBox>
+                                          <HBox prefHeight="50.0" prefWidth="200.0">
+                                             <children>
+                                                <JFXButton fx:id="btn_open_ntc_3" text="Abrir">
+                                                   <graphic>
+                                                      <FontAwesomeIcon fill="#25a117" glyphName="EXPAND" size="1.5em" />
+                                                   </graphic>
+                                                </JFXButton>
+                                                <JFXBadge fx:id="bdg_ntc_3" maxHeight="-Infinity" maxWidth="-Infinity" text="">
+                                                   <children>
+                                                      <JFXButton fx:id="btn_like_ntc_3" text="Like">
+                                                         <graphic>
+                                                            <FontAwesomeIcon fill="#ff0101" glyphName="HEART" size="1.5em" />
+                                                         </graphic>
+                                                      </JFXButton>
+                                                   </children>
+                                                </JFXBadge>
+                                                <JFXButton maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" text="Reportar">
+                                                   <graphic>
+                                                      <FontAwesomeIcon fill="#ff9500" glyphName="WARNING" />
+                                                   </graphic>
+                                                </JFXButton>
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </HBox>
+                              <HBox fx:id="hb_ntc_4" alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                                 <children>
+                                    <ImageView fx:id="img_ntc_4" fitHeight="98.0" fitWidth="98.0" pickOnBounds="true">
+                                       <image>
+                                          <Image url="@../Pictures/noticia1.png" />
+                                       </image>
+                                    </ImageView>
+                                    <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                                       <children>
+                                          <HBox alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="200.0">
+                                             <children>
+                                                <Label fx:id="lb_tittle_ntc_4" text="Essa é a noticia 4!">
+                                                   <font>
+                                                      <Font name="System Bold" size="16.0" />
+                                                   </font>
+                                                   <HBox.margin>
+                                                      <Insets left="10.0" />
+                                                   </HBox.margin>
+                                                </Label>
+                                             </children>
+                                          </HBox>
+                                          <HBox prefHeight="50.0" prefWidth="200.0">
+                                             <children>
+                                                <JFXButton fx:id="btn_open_ntc_4" text="Abrir">
+                                                   <graphic>
+                                                      <FontAwesomeIcon fill="#25a117" glyphName="EXPAND" size="1.5em" />
+                                                   </graphic>
+                                                </JFXButton>
+                                                <JFXBadge fx:id="bdg_ntc_4" maxHeight="-Infinity" maxWidth="-Infinity" text="">
+                                                   <children>
+                                                      <JFXButton fx:id="btn_like_ntc_4" text="Like">
+                                                         <graphic>
+                                                            <FontAwesomeIcon fill="#ff0101" glyphName="HEART" size="1.5em" />
+                                                         </graphic>
+                                                      </JFXButton>
+                                                   </children>
+                                                </JFXBadge>
+                                                <JFXButton maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" text="Reportar">
+                                                   <graphic>
+                                                      <FontAwesomeIcon fill="#ff9500" glyphName="WARNING" />
+                                                   </graphic>
+                                                </JFXButton>
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </HBox>
+                              <HBox fx:id="hb_ntc_5" alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                                 <children>
+                                    <ImageView fx:id="img_ntc_5" fitHeight="98.0" fitWidth="98.0" pickOnBounds="true">
+                                       <image>
+                                          <Image url="@../Pictures/noticia1.png" />
+                                       </image>
+                                    </ImageView>
+                                    <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                                       <children>
+                                          <HBox alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="200.0">
+                                             <children>
+                                                <Label fx:id="lb_tittle_ntc_5" text="Essa é a noticia 5!">
+                                                   <font>
+                                                      <Font name="System Bold" size="16.0" />
+                                                   </font>
+                                                   <HBox.margin>
+                                                      <Insets left="10.0" />
+                                                   </HBox.margin>
+                                                </Label>
+                                             </children>
+                                          </HBox>
+                                          <HBox prefHeight="50.0" prefWidth="200.0">
+                                             <children>
+                                                <JFXButton fx:id="btn_open_ntc_5" text="Abrir">
+                                                   <graphic>
+                                                      <FontAwesomeIcon fill="#25a117" glyphName="EXPAND" size="1.5em" />
+                                                   </graphic>
+                                                </JFXButton>
+                                                <JFXBadge fx:id="bdg_ntc_5" maxHeight="-Infinity" maxWidth="-Infinity" text="">
+                                                   <children>
+                                                      <JFXButton fx:id="btn_like_ntc_5" text="Like">
+                                                         <graphic>
+                                                            <FontAwesomeIcon fill="#ff0101" glyphName="HEART" size="1.5em" />
+                                                         </graphic>
+                                                      </JFXButton>
+                                                   </children>
+                                                </JFXBadge>
+                                                <JFXButton maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" text="Reportar">
+                                                   <graphic>
+                                                      <FontAwesomeIcon fill="#ff9500" glyphName="WARNING" />
+                                                   </graphic>
+                                                </JFXButton>
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </HBox>
+                              <HBox fx:id="hb_ntc_6" alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                                 <children>
+                                    <ImageView fx:id="img_ntc_6" fitHeight="98.0" fitWidth="98.0" pickOnBounds="true">
+                                       <image>
+                                          <Image url="@../Pictures/noticia1.png" />
+                                       </image>
+                                    </ImageView>
+                                    <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                                       <children>
+                                          <HBox alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="200.0">
+                                             <children>
+                                                <Label fx:id="lb_tittle_ntc_6" text="Essa é a noticia 6!">
+                                                   <font>
+                                                      <Font name="System Bold" size="16.0" />
+                                                   </font>
+                                                   <HBox.margin>
+                                                      <Insets left="10.0" />
+                                                   </HBox.margin>
+                                                </Label>
+                                             </children>
+                                          </HBox>
+                                          <HBox prefHeight="50.0" prefWidth="200.0">
+                                             <children>
+                                                <JFXButton fx:id="btn_open_ntc_7" text="Abrir">
+                                                   <graphic>
+                                                      <FontAwesomeIcon fill="#25a117" glyphName="EXPAND" size="1.5em" />
+                                                   </graphic>
+                                                </JFXButton>
+                                                <JFXBadge fx:id="bdg_ntc_6" maxHeight="-Infinity" maxWidth="-Infinity" text="">
+                                                   <children>
+                                                      <JFXButton fx:id="btn_like_ntc_6" text="Like">
+                                                         <graphic>
+                                                            <FontAwesomeIcon fill="#ff0101" glyphName="HEART" size="1.5em" />
+                                                         </graphic>
+                                                      </JFXButton>
+                                                   </children>
+                                                </JFXBadge>
+                                                <JFXButton maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" text="Reportar">
+                                                   <graphic>
+                                                      <FontAwesomeIcon fill="#ff9500" glyphName="WARNING" />
+                                                   </graphic>
+                                                </JFXButton>
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>
