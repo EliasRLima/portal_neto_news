@@ -12,7 +12,7 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
-<?import org.kordamp.ikonli.javafx.FontIcon?>
+<?import javafx.scene.layout.StackPane?>
 <?import com.jfoenix.controls.*?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
@@ -85,15 +85,14 @@
                   </HBox>
                   <HBox alignment="TOP_RIGHT" prefHeight="100.0" prefWidth="200.0">
                      <children>
-                        <JFXNodesList>
+                        <JFXNodesList fx:id="nd_lista_acesso">
                            <children>
                               <JFXButton buttonType="RAISED" contentDisplay="CENTER" graphicTextGap="7.0" ripplerFill="WHITE" style="-fx-background-color: #ff9933; -fx-background-radius: 100;" text=" ">
                                  <graphic>
                                     <FontAwesomeIcon glyphName="USER" size="2em" />
                                  </graphic>
                               </JFXButton>
-                              <JFXButton fx:id="btn_login" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="60.0" style="-fx-background-color: #ff9933;" text="ACESSO" textFill="WHITE" />
-                              <JFXButton fx:id="btn_sair" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="60.0" style="-fx-background-color: #ff9933;" text="SAIR" textFill="WHITE" />
+                              <JFXButton fx:id="btn_acesso" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="60.0" style="-fx-background-color: #ff9933;" text="ENTRAR" textFill="WHITE" />
                               <JFXButton fx:id="btn_sobre" buttonType="RAISED" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="60.0" style="-fx-background-color: white;" text="SOBRE" textFill="#ff9933" />
                            </children>
                            <cursor>
@@ -177,7 +176,7 @@
                                  <children>
                                     <ImageView fx:id="img_ntc_1" fitHeight="98.0" fitWidth="98.0" pickOnBounds="true">
                                        <image>
-                                          <Image url="@../Pictures/noticia1.png" />
+                                          <Image url="images/ntc_0_98x98.png" />
                                        </image>
                                     </ImageView>
                                     <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
@@ -194,35 +193,24 @@
                                                 </Label>
                                              </children>
                                           </HBox>
-                                          <HBox prefHeight="50.0" prefWidth="200.0">
+                                          <HBox prefHeight="25.0" prefWidth="200.0">
                                              <children>
                                                 <JFXButton fx:id="btn_open_ntc_1" text="Abrir">
                                                    <graphic>
                                                       <FontAwesomeIcon fill="#25a117" glyphName="EXPAND" size="1.5em" />
                                                    </graphic>
                                                 </JFXButton>
-                                                <JFXBadge fx:id="bdg_ntc_1" maxHeight="-Infinity" maxWidth="-Infinity" text="">
-                                                   <children>
-                                                      <JFXButton fx:id="btn_like_ntc_1" text="Like">
+                                                <JFXBadge fx:id="bdg_ntc_1" position="BOTTOM_RIGHT" text="15" styleClass="icons-badge">
+                    								<JFXButton fx:id="btn_like_ntc_1" contentDisplay="CENTER" text=" ">
                                                          <graphic>
-                                                            <FontAwesomeIcon fill="#ff0101" glyphName="HEART" size="1.5em" />
+                                                            <FontAwesomeIcon fx:id="icon_like_ntc_1" fill="#ff0101" glyphName="HEART" size="1.5em" />
                                                          </graphic>
-                                                      </JFXButton>
-                                                   </children>
-                                                </JFXBadge>
-                                                <Label styleClass="title-label">Badge Icons</Label>
-        <HBox spacing="20" style="-fx-padding: 0 0 0 50;">
-            <children>
-                <JFXBadge fx:id="badge1" position="TOP_RIGHT" text="1"
-                          styleClass="icons-badge">
-                    <StackPane style="-fx-padding: 10;">
-                         <FontIcon iconLiteral="fas-star" iconSize="24"
-                                             styleClass="icon"/>
-                    </StackPane>
-                </JFXBadge>
-            </children>
-        </HBox>
-                                                <JFXButton maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" text="Reportar">
+                                                         <padding>
+                  											<Insets right="15.0" />
+               											 </padding>
+                                                     </JFXButton>
+                								</JFXBadge>
+                                                <JFXButton fx:id="btn_rp_ntc_1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" text="Reportar">
                                                    <graphic>
                                                       <FontAwesomeIcon fill="#ff9500" glyphName="WARNING" />
                                                    </graphic>
@@ -261,16 +249,16 @@
                                                       <FontAwesomeIcon fill="#25a117" glyphName="EXPAND" size="1.5em" />
                                                    </graphic>
                                                 </JFXButton>
-                                                <JFXBadge fx:id="bdg_ntc_2" maxHeight="-Infinity" maxWidth="-Infinity" text="">
+                                                <JFXBadge fx:id="bdg_ntc_2" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" text="">
                                                    <children>
                                                       <JFXButton fx:id="btn_like_ntc_2" text="Like">
                                                          <graphic>
-                                                            <FontAwesomeIcon fill="#ff0101" glyphName="HEART" size="1.5em" />
+                                                            <FontAwesomeIcon fx:id="icon_like_ntc_2" fill="#ff0101" glyphName="HEART" size="1.5em" />
                                                          </graphic>
                                                       </JFXButton>
                                                    </children>
                                                 </JFXBadge>
-                                                <JFXButton maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" text="Reportar">
+                                                <JFXButton fx:id="btn_rp_ntc_2" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" text="Reportar">
                                                    <graphic>
                                                       <FontAwesomeIcon fill="#ff9500" glyphName="WARNING" />
                                                    </graphic>
@@ -313,12 +301,12 @@
                                                    <children>
                                                       <JFXButton fx:id="btn_like_ntc_3" text="Like">
                                                          <graphic>
-                                                            <FontAwesomeIcon fill="#ff0101" glyphName="HEART" size="1.5em" />
+                                                            <FontAwesomeIcon fx:id="icon_like_ntc_3" fill="#ff0101" glyphName="HEART" size="1.5em" />
                                                          </graphic>
                                                       </JFXButton>
                                                    </children>
                                                 </JFXBadge>
-                                                <JFXButton maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" text="Reportar">
+                                                <JFXButton fx:id="btn_rp_ntc_3" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" text="Reportar">
                                                    <graphic>
                                                       <FontAwesomeIcon fill="#ff9500" glyphName="WARNING" />
                                                    </graphic>
@@ -361,12 +349,12 @@
                                                    <children>
                                                       <JFXButton fx:id="btn_like_ntc_4" text="Like">
                                                          <graphic>
-                                                            <FontAwesomeIcon fill="#ff0101" glyphName="HEART" size="1.5em" />
+                                                            <FontAwesomeIcon fx:id="icon_like_ntc_4" fill="#ff0101" glyphName="HEART" size="1.5em" />
                                                          </graphic>
                                                       </JFXButton>
                                                    </children>
                                                 </JFXBadge>
-                                                <JFXButton maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" text="Reportar">
+                                                <JFXButton fx:id="btn_rp_ntc_4" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" text="Reportar">
                                                    <graphic>
                                                       <FontAwesomeIcon fill="#ff9500" glyphName="WARNING" />
                                                    </graphic>
@@ -409,12 +397,12 @@
                                                    <children>
                                                       <JFXButton fx:id="btn_like_ntc_5" text="Like">
                                                          <graphic>
-                                                            <FontAwesomeIcon fill="#ff0101" glyphName="HEART" size="1.5em" />
+                                                            <FontAwesomeIcon fx:id="icon_like_ntc_5" fill="#ff0101" glyphName="HEART" size="1.5em" />
                                                          </graphic>
                                                       </JFXButton>
                                                    </children>
                                                 </JFXBadge>
-                                                <JFXButton maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" text="Reportar">
+                                                <JFXButton fx:id="btn_rp_ntc_5" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" text="Reportar">
                                                    <graphic>
                                                       <FontAwesomeIcon fill="#ff9500" glyphName="WARNING" />
                                                    </graphic>
@@ -457,12 +445,12 @@
                                                    <children>
                                                       <JFXButton fx:id="btn_like_ntc_6" text="Like">
                                                          <graphic>
-                                                            <FontAwesomeIcon fill="#ff0101" glyphName="HEART" size="1.5em" />
+                                                            <FontAwesomeIcon fx:id="icon_like_ntc_6" fill="#ff0101" glyphName="HEART" size="1.5em" />
                                                          </graphic>
                                                       </JFXButton>
                                                    </children>
                                                 </JFXBadge>
-                                                <JFXButton maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" text="Reportar">
+                                                <JFXButton fx:id="btn_rp_ntc_6" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" text="Reportar">
                                                    <graphic>
                                                       <FontAwesomeIcon fill="#ff9500" glyphName="WARNING" />
                                                    </graphic>

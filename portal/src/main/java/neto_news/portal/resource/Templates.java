@@ -2,7 +2,8 @@ package neto_news.portal.resource;
 
 public enum Templates {
   
-  BASE("view/neto_news.fxml");
+  BASE("view/neto_news.fxml"),
+  REPORT("view/report.fxml");
   
   private String url;
   private Templates(String url){

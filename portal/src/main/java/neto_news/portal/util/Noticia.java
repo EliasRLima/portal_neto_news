@@ -1,10 +1,11 @@
 package neto_news.portal.util;
 
-import java.awt.Image;
+import javafx.scene.image.Image;
 
 public class Noticia {
     
     private String titulo;
+    private String mini_titulo;
     private Image img98x98;
     private Image img500x350;
     private String texto;
@@ -14,9 +15,10 @@ public class Noticia {
 		// TODO Auto-generated constructor stub
 	}
 
-	public Noticia(String titulo, Image img98x98, Image img500x350, String texto, int likes) {
+	public Noticia(String titulo, String  mini_titulo,Image img98x98, Image img500x350, String texto, int likes) {
 		super();
 		this.titulo = titulo;
+		this.mini_titulo = mini_titulo;
 		this.img98x98 = img98x98;
 		this.img500x350 = img500x350;
 		this.texto = texto;
@@ -39,7 +41,7 @@ public class Noticia {
 		this.img98x98 = img98x98;
 	}
 
-	public Image getImg500x350() {
+	public javafx.scene.image.Image getImg500x350() {
 		return img500x350;
 	}
 
@@ -62,6 +64,15 @@ public class Noticia {
 	public void setLikes(int likes) {
 		this.likes = likes;
 	}
+
+	public String getMini_titulo() {
+		return mini_titulo;
+	}
+
+	public void setMini_titulo(String mini_titulo) {
+		this.mini_titulo = mini_titulo;
+	}
     
+	
      
 }
