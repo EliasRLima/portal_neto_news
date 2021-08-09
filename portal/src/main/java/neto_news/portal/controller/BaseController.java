@@ -128,7 +128,14 @@ public class BaseController implements Initializable {
 		  btn_acesso.setOnAction(e -> {
 			  if(btn_acesso.getText().equals("ENTRAR")) {
 				  //abrir metodo de login
-				  btn_acesso.setText("SAIR");
+				  try {
+					inicioService.login();
+					btn_acesso.setText("SAIR");
+				  } catch (IOException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				  }
+				  
 			  }else {
 				  //abrir metodo de logout
 				  btn_acesso.setText("ENTRAR");

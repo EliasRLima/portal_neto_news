@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1024.0" style="-fx-background-color: #111;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <HBox prefHeight="100.0" prefWidth="200.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <JFXButton text="Voltar" textFill="#c30a0a">
+               <HBox.margin>
+                  <Insets left="10.0" top="10.0" />
+               </HBox.margin>
+            </JFXButton>
+         </children>
+      </HBox>
+      <HBox alignment="TOP_RIGHT" prefHeight="100.0" prefWidth="200.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <JFXButton contentDisplay="CENTER" text=" ">
+               <graphic>
+                  <FontAwesomeIcon fill="WHITE" glyphName="MINUS" />
+               </graphic>
+            </JFXButton>
+            <JFXButton contentDisplay="CENTER" text=" ">
+               <graphic>
+                  <FontAwesomeIcon fill="RED" glyphName="CLOSE" />
+               </graphic>
+            </JFXButton>
+         </children>
+      </HBox>
+      <AnchorPane layoutX="298.0" layoutY="249.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #111;" AnchorPane.bottomAnchor="80.0" AnchorPane.leftAnchor="80.0" AnchorPane.rightAnchor="80.0" AnchorPane.topAnchor="80.0">
+         <children>
+            <HBox prefHeight="608.0" prefWidth="430.0" style="-fx-background-color: #fff;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <Label text="Neto New's">
+                                 <font>
+                                    <Font name="System Bold" size="20.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets right="20.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <VBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="171.0">
+                                 <children>
+                                    <Label text="PORTAL DE">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label prefHeight="27.0" prefWidth="149.0" text="INFORMAÇÕES">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                           </children>
+                           <VBox.margin>
+                              <Insets top="80.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <Label text="É novo no sistema?">
+                           <VBox.margin>
+                              <Insets bottom="10.0" top="60.0" />
+                           </VBox.margin>
+                        </Label>
+                        <Label text="clique em cadastrar e fique por dentro no melhor portal de LP3!" />
+                        <JFXButton maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="180.0" style="-fx-border-color: #ff9933;" text="Cadastrar">
+                           <VBox.margin>
+                              <Insets bottom="15.0" top="15.0" />
+                           </VBox.margin>
+                        </JFXButton>
+                        <Label text="É de graça e sem anuncios!" />
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            <HBox prefHeight="608.0" prefWidth="430.0" style="-fx-background-color: #ff9933;" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <Label text="Faça logon">
+                           <VBox.margin>
+                              <Insets top="110.0" />
+                           </VBox.margin>
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <VBox prefHeight="200.0" prefWidth="100.0">
+                           <children>
+                              <Label text="E-mail">
+                                 <VBox.margin>
+                                    <Insets top="60.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <TextField />
+                              <Label text="Senha" />
+                              <PasswordField />
+                           </children>
+                        </VBox>
+                        <Hyperlink text="Esqueceu sua senha?" />
+                        <Hyperlink text="Ajuda" />
+                        <JFXButton prefHeight="40.0" prefWidth="180.0" style="-fx-background-color: #0080ff; -fx-text-fill: #fff;" text="Faça logon" />
+                     </children>
+                     <padding>
+                        <Insets left="30.0" right="30.0" />
+                     </padding>
+                  </VBox>
+               </children>
+            </HBox>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

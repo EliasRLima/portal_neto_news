@@ -1,6 +1,12 @@
 package neto_news.portal.util;
 
+import java.io.IOException;
+
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.stage.Stage;
+import neto_news.portal.resource.Templates;
 
 /**
  * Service para facilitar a comunicação do stage principal 
@@ -43,6 +49,26 @@ public final class InicioService {
    */
   public void minimizar() {
     this.janela.setIconified(true);
+  }
+  
+  public void login() throws IOException {
+	  Parent root = FXMLLoader.load(CarregadorRecursos.getResource(Templates.LOGIN.getUrl()));
+	  Scene scene = new Scene(root, 1024, 768); // resolucao inicial
+	  this.janela.setScene(scene);
+	  this.janela.setTitle("NETO NEWS");
+	  this.janela.setMinHeight(768);
+	  this.janela.setMinWidth(1024);
+	  this.janela.show();
+  }
+  
+  public void inicial() throws IOException {
+	    Parent root = FXMLLoader.load(CarregadorRecursos.getResource(Templates.BASE.getUrl()));
+		Scene scene = new Scene(root, 1024, 768); // resolucao inicial
+		this.janela.setScene(scene);
+		this.janela.setTitle("NETO NEWS");
+		this.janela.setMinHeight(768);
+		this.janela.setMinWidth(1024);
+		this.janela.show();
   }
 
   

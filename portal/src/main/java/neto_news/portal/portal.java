@@ -19,14 +19,9 @@ public class portal  extends Application {
 			InicioService.iniciarClasse(stage);
 			Login.iniciarClasse(null);
 			stage.initStyle(StageStyle.UNDECORATED); // removendo botoes padrao
-			Parent root = FXMLLoader.load(CarregadorRecursos.getResource(Templates.BASE.getUrl()));
-			Scene scene = new Scene(root, 1024, 768); // resolucao inicial
-			stage.setScene(scene);
-			stage.setTitle("NETO NEWS");
-			stage.setMinHeight(768);
-			stage.setMinWidth(1024);
 			
-			stage.show();
+			InicioService is = InicioService.getInstancia();
+			is.inicial();
 		}
 
 		@Override
