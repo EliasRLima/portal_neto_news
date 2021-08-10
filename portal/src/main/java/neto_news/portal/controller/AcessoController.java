@@ -4,6 +4,8 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+import javax.swing.JOptionPane;
+
 import com.jfoenix.controls.JFXButton;
 
 import javafx.fxml.FXML;
@@ -11,6 +13,8 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Hyperlink;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import neto_news.portal.Objects.Perfil;
+import neto_news.portal.model.AcessoModel;
 import neto_news.portal.util.InicioService;
 import neto_news.portal.util.Login;
 
@@ -74,7 +78,12 @@ public class AcessoController implements Initializable{
 		});
 		
 		btn_logon.setOnAction(e -> {
-			Logar();
+			try {
+				Logar();
+			} catch (IOException e1) {
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
+			}
 		});
 		
 	}
@@ -95,7 +104,32 @@ public class AcessoController implements Initializable{
 		  });
 	  }
 	
-	private void Logar() {
+	private void Logar() throws IOException {
+		
+		String user = txt_email.getText();
+		String pass = txt_senha.getText();
+		
+		if(user == null || user.equals("")) {
+			JOptionPane.showMessageDialog(null, "Digite o usuario!");
+			return;
+		}
+		
+		AcessoModel am = new AcessoModel();
+		if(am.estaConectado()) {
+			Perfil pes = am.buscaLogin(user, pass);
+			
+			if(pes == null) {
+				JOptionPane.showMessageDialog(null, "Credenciais incorretas!");
+				return;
+			}
+			
+			login.iniciarClasse(pes);
+			inicioService.inicial();
+			
+		}else {
+			JOptionPane.showMessageDialog(null, "Nao foi possivel estabelecer conexao com a base de dados!");
+		}
+		
 		
 	}
 

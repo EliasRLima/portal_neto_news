@@ -28,11 +28,11 @@ import javax.imageio.ImageIO;
 import com.jfoenix.controls.JFXTextArea;
 
 import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon;
+import neto_news.portal.Objects.Noticia;
 import neto_news.portal.resource.Templates;
 import neto_news.portal.util.CarregadorRecursos;
 import neto_news.portal.util.InicioService;
 import neto_news.portal.util.Login;
-import neto_news.portal.util.Noticia;
 
 public class BaseController implements Initializable {
 

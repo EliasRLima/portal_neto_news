@@ -1,4 +1,4 @@
-package neto_news.portal.util;
+package neto_news.portal.Objects;
 
 import javafx.scene.image.Image;
 

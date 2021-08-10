@@ -1,20 +1,21 @@
 package neto_news.portal.util;
 
 import javafx.stage.Stage;
+import neto_news.portal.Objects.Perfil;
 
 public class Login {
 	
 	private static Login instancia;
-	private String user;
+	private Perfil user;
 	private boolean login;
 	
-	private Login(String usuario) {
+	private Login(Perfil usuario) {
 	    this.user = usuario;
 	    this.login = user != null;
 	}
 
 	  
-	public static Login iniciarClasse(String usuario) {
+	public static Login iniciarClasse(Perfil usuario) {
 	    instancia = new Login(usuario);
 	    return instancia;
 	}
@@ -25,8 +26,6 @@ public class Login {
 	      throw new Exception("Instancia da classe Login não foi criada!");
 	  return instancia;
 	}
-	
-	
 	
 	public boolean isLogado() {
 		return this.login;
