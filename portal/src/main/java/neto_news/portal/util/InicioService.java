@@ -55,7 +55,17 @@ public final class InicioService {
 	  Parent root = FXMLLoader.load(CarregadorRecursos.getResource(Templates.LOGIN.getUrl()));
 	  Scene scene = new Scene(root, 1024, 768); // resolucao inicial
 	  this.janela.setScene(scene);
-	  this.janela.setTitle("NETO NEWS");
+	  this.janela.setTitle("NETO NEWS - Login");
+	  this.janela.setMinHeight(768);
+	  this.janela.setMinWidth(1024);
+	  this.janela.show();
+  }
+  
+  public void cadastro() throws IOException {
+	  Parent root = FXMLLoader.load(CarregadorRecursos.getResource(Templates.CADASTRO.getUrl()));
+	  Scene scene = new Scene(root, 1024, 768); // resolucao inicial
+	  this.janela.setScene(scene);
+	  this.janela.setTitle("NETO NEWS - Cadastro");
 	  this.janela.setMinHeight(768);
 	  this.janela.setMinWidth(1024);
 	  this.janela.show();

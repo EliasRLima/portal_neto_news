@@ -82,7 +82,7 @@ public class BaseController implements Initializable {
 	  public BaseController() throws Exception {
 			this.inicioService = InicioService.getInstancia();
 			this.login = Login.getInstancia();
-		}
+	  }
 	  
 	  @Override
 	  public void initialize(URL arg0, ResourceBundle arg1) {
