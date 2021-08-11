@@ -85,6 +85,23 @@
                   </HBox>
                   <HBox alignment="TOP_RIGHT" prefHeight="100.0" prefWidth="200.0">
                      <children>
+                        <JFXNodesList fx:id="nd_lista_noticias">
+                           <children>
+                              <JFXButton buttonType="RAISED" contentDisplay="CENTER" graphicTextGap="7.0" ripplerFill="WHITE" style="-fx-background-color: #fff; -fx-background-radius: 50;" text=" ">
+                                 <graphic>
+                                    <FontAwesomeIcon glyphName="BULLHORN" size="2em" />
+                                 </graphic>
+                              </JFXButton>
+                              <JFXButton fx:id="btn_new_noticia" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="150.0" style="-fx-background-color: #ff9933;" text="CADASTRAR NOTICIA" textFill="WHITE" />
+                              <JFXButton fx:id="btn_my_noticia" buttonType="RAISED" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="150.0" style="-fx-background-color: white;" text="MINHAS NOTICIAS" textFill="#ff9933" />
+                           </children>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <HBox.margin>
+                              <Insets right="15.0" />
+                           </HBox.margin>
+                        </JFXNodesList>
                         <JFXNodesList fx:id="nd_lista_acesso">
                            <children>
                               <JFXButton buttonType="RAISED" contentDisplay="CENTER" graphicTextGap="7.0" ripplerFill="WHITE" style="-fx-background-color: #ff9933; -fx-background-radius: 100;" text=" ">

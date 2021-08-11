@@ -67,7 +67,7 @@ public class BaseController implements Initializable {
 	  JFXButton btn_mn_news, btn_mn_liked, btn_mn_esportes, btn_mn_games, btn_mn_politica;
 	  
 	  @FXML
-	  JFXNodesList nd_lista_acesso;
+	  JFXNodesList nd_lista_acesso, nd_lista_noticias;
 	  
 	  @FXML
 	  JFXButton btn_acesso, btn_sobre, btn_minimizar, btn_close;
@@ -88,8 +88,11 @@ public class BaseController implements Initializable {
 	  public void initialize(URL arg0, ResourceBundle arg1) {
 		  
 		  btn_actions();
+		  nd_lista_noticias.setVisible(false);
+		  
 		  if(login.isLogado()) {
 			  btn_acesso.setText("SAIR");
+			  nd_lista_noticias.setVisible(true);
 		  }
 		  
 		  ntcs = getNoticias(0);
@@ -138,6 +141,13 @@ public class BaseController implements Initializable {
 				  
 			  }else {
 				  //abrir metodo de logout
+				  login.iniciarClasse(null);
+				  try {
+					inicioService.login();
+				  } catch (IOException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				  }
 				  btn_acesso.setText("ENTRAR");
 			  }
 		  });
