@@ -5,6 +5,7 @@ public enum Templates {
   BASE("view/neto_news.fxml"),
   CADASTRO("view/tela_cadastro.fxml"),
   LOGIN("view/tela_login.fxml"),
+  LISTANOTICIA("view/tela_listagem_noticias.fxml"),
   REPORT("view/report.fxml");
   
   private String url;

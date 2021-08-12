@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXNodesList?>
+<?import com.jfoenix.controls.JFXTreeTableView?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TreeTableColumn?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <AnchorPane layoutX="-207.0" layoutY="69.0" prefHeight="210.0" prefWidth="761.0" rotate="135.0" style="-fx-background-color: #ff9933;" />
+      <AnchorPane layoutX="-31.0" layoutY="-140.0" prefHeight="834.0" prefWidth="162.0" rotate="45.0" style="-fx-background-color: #111;" AnchorPane.bottomAnchor="514.0" AnchorPane.leftAnchor="-31.0" AnchorPane.rightAnchor="893.0" AnchorPane.topAnchor="-140.0">
+         <children>
+            <JFXButton layoutX="12.0" layoutY="148.0" rotate="-45.0" text="Voltar" textFill="RED">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <graphic>
+                  <FontAwesomeIcon fill="RED" glyphName="ARROW_LEFT" />
+               </graphic>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+      <JFXNodesList layoutX="976.0" layoutY="26.0" AnchorPane.rightAnchor="45.0" AnchorPane.topAnchor="45.0">
+         <children>
+            <JFXButton contentDisplay="CENTER" style="-fx-background-color: #fff; -fx-border-radius: 50; -fx-background-radius: 50;" text=" ">
+               <graphic>
+                  <FontAwesomeIcon glyphName="USER" size="3em" />
+               </graphic>
+            </JFXButton>
+            <JFXButton text="Nova" />
+            <JFXButton text="Sair" />
+         </children>
+      </JFXNodesList>
+      <Label layoutX="272.0" layoutY="123.0" text="Ola, $PESSOA! Essas sao suas noticias:">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Label>
+      <JFXTreeTableView editable="true" layoutX="149.0" layoutY="222.0" prefHeight="479.0" prefWidth="807.0" AnchorPane.bottomAnchor="67.0" AnchorPane.leftAnchor="149.0" AnchorPane.rightAnchor="68.0" AnchorPane.topAnchor="222.0">
+         <columns>
+            <TreeTableColumn prefWidth="78.0" text="Numero" />
+            <TreeTableColumn minWidth="0.0" prefWidth="202.0" text="Titulo" />
+            <TreeTableColumn prefWidth="526.0" text="Resumo" />
+         </columns>
+      </JFXTreeTableView>
+      <JFXButton text=" " AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="0.0">
+         <graphic>
+            <FontAwesomeIcon glyphName="MINUS" />
+         </graphic>
+      </JFXButton>
+      <JFXButton text=" " AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <graphic>
+            <FontAwesomeIcon fill="#ff0404" glyphName="REMOVE" />
+         </graphic>
+      </JFXButton>
+   </children>
+</AnchorPane>
