@@ -30,5 +30,9 @@ public class Login {
 	public boolean isLogado() {
 		return this.login;
 	}
+	
+	public String getUser() {
+		return this.user.getNome();
+	}
 
 }

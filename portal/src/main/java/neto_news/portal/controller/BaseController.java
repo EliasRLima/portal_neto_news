@@ -70,7 +70,7 @@ public class BaseController implements Initializable {
 	  JFXNodesList nd_lista_acesso, nd_lista_noticias;
 	  
 	  @FXML
-	  JFXButton btn_acesso, btn_sobre, btn_minimizar, btn_close;
+	  JFXButton btn_acesso, btn_sobre, btn_minimizar, btn_close, btn_new_noticia, btn_my_noticia;
 	  
 	  @FXML
 	  JFXButton btn_ntc_refresh, btn_ntc_next, btn_ntc_back;
@@ -128,6 +128,24 @@ public class BaseController implements Initializable {
 
 	private void btn_actions() {
 		  
+		   btn_new_noticia.setOnAction(e -> {
+			   try {
+				  inicioService.noticiaCadastro();
+			   } catch (IOException e1) {
+				  // TODO Auto-generated catch block
+				  e1.printStackTrace();
+			   }
+		   });
+		
+		   btn_my_noticia.setOnAction(e -> {
+			  try {
+				  inicioService.noticiaLista();
+			  } catch (IOException e1) {
+				  // TODO Auto-generated catch block
+				  e1.printStackTrace();
+			  }
+		  });
+		
 		  btn_acesso.setOnAction(e -> {
 			  if(btn_acesso.getText().equals("ENTRAR")) {
 				  //abrir metodo de login

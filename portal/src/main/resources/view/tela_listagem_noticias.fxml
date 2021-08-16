@@ -10,12 +10,12 @@
 <?import javafx.scene.text.Font?>
 
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="neto_news.portal.controller.ListNoticiaController">
    <children>
       <AnchorPane layoutX="-207.0" layoutY="69.0" prefHeight="210.0" prefWidth="761.0" rotate="135.0" style="-fx-background-color: #ff9933;" />
       <AnchorPane layoutX="-31.0" layoutY="-140.0" prefHeight="834.0" prefWidth="162.0" rotate="45.0" style="-fx-background-color: #111;" AnchorPane.bottomAnchor="514.0" AnchorPane.leftAnchor="-31.0" AnchorPane.rightAnchor="893.0" AnchorPane.topAnchor="-140.0">
          <children>
-            <JFXButton layoutX="12.0" layoutY="148.0" rotate="-45.0" text="Voltar" textFill="RED">
+            <JFXButton fx:id="btn_voltar" layoutX="12.0" layoutY="148.0" rotate="-45.0" text="Voltar" textFill="RED">
                <font>
                   <Font size="20.0" />
                </font>
@@ -36,7 +36,7 @@
             <JFXButton text="Sair" />
          </children>
       </JFXNodesList>
-      <Label layoutX="272.0" layoutY="123.0" text="Ola, $PESSOA! Essas sao suas noticias:">
+      <Label fx:id="lb_titulo" layoutX="272.0" layoutY="123.0" text="Ola, $PESSOA! Essas sao suas noticias:">
          <font>
             <Font size="30.0" />
          </font>
@@ -48,12 +48,12 @@
             <TreeTableColumn prefWidth="526.0" text="Resumo" />
          </columns>
       </JFXTreeTableView>
-      <JFXButton text=" " AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="0.0">
+      <JFXButton fx:id="btn_minus" text=" " AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="0.0">
          <graphic>
             <FontAwesomeIcon glyphName="MINUS" />
          </graphic>
       </JFXButton>
-      <JFXButton text=" " AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <JFXButton fx:id="btn_exit" text=" " AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <graphic>
             <FontAwesomeIcon fill="#ff0404" glyphName="REMOVE" />
          </graphic>
