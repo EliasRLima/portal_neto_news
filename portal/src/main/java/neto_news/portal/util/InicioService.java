@@ -58,6 +58,7 @@ public final class InicioService {
 	  this.janela.setTitle("NETO NEWS - Login");
 	  this.janela.setMinHeight(768);
 	  this.janela.setMinWidth(1024);
+	  new ResizeListener().aplicarAoStage(this.janela);
 	  this.janela.show();
   }
   
@@ -68,6 +69,7 @@ public final class InicioService {
 	  this.janela.setTitle("NETO NEWS - Cadastro");
 	  this.janela.setMinHeight(768);
 	  this.janela.setMinWidth(1024);
+	  new ResizeListener().aplicarAoStage(this.janela);
 	  this.janela.show();
   }
   
@@ -78,6 +80,7 @@ public final class InicioService {
 		this.janela.setTitle("NETO NEWS");
 		this.janela.setMinHeight(768);
 		this.janela.setMinWidth(1024);
+		new ResizeListener().aplicarAoStage(this.janela);
 		this.janela.show();
   }
   
@@ -88,6 +91,7 @@ public final class InicioService {
 		this.janela.setTitle("NETO NEWS");
 		this.janela.setMinHeight(768);
 		this.janela.setMinWidth(1024);
+		new ResizeListener().aplicarAoStage(this.janela);
 		this.janela.show();
   }
   
@@ -98,6 +102,7 @@ public final class InicioService {
 		this.janela.setTitle("NETO NEWS");
 		this.janela.setMinHeight(768);
 		this.janela.setMinWidth(1024);
+		new ResizeListener().aplicarAoStage(this.janela);
 		this.janela.show();
 }
   

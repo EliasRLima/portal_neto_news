@@ -19,7 +19,6 @@ public class portal  extends Application {
 			InicioService.iniciarClasse(stage);
 			Login.iniciarClasse(null);
 			stage.initStyle(StageStyle.UNDECORATED); // removendo botoes padrao
-			
 			InicioService is = InicioService.getInstancia();
 			is.inicial();
 		}
